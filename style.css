@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  background-color: white;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+body{
+  background-color: #363636;
+  text-align: center;
+  font-family: sans-serif;
+
+}
+
+.scoreboard{
+  border: 5px solid white;
+  border-radius: 5px;
+  margin: 10px auto;
+  width: 200px;
+  font-size: 50px;
+  color: white;
+  position: relative;
+}
+
+.label{
+  background-color: red;
+  font-size: 20px;
+  width: 100px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+#player{
+  position: absolute;
+  top: 15px;
+  left :-75px;
+}
+
+#comp{
+  position: absolute;
+  top: 15px;
+  right :-75px;
+}
+
+.result{
+  margin: 20px auto;
+  color:white;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.option{
+  border: 5px solid black;
+  border-radius: 50%;
+  margin: 0px 10px;
+  display: inline;
+}
+
+.option:hover{
+  cursor: pointer;
+}
+
+.action{
+  margin: 20px auto;
+  color:white;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
