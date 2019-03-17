@@ -75,3 +75,15 @@ body{
   font-family: sans-serif;
   font-weight: bold;
 }
+
+.c_green{
+  border: 5px solid green;
+}
+
+.c_grey{
+  border: 5px solid grey;
+}
+
+.c_red{
+  border: 5px solid red;
+}

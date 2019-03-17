@@ -13,21 +13,37 @@ function compC(){
   return choice[Math.floor(Math.random()*3)];
 }
 
+function toWord(ch){
+  if(ch=='r')
+    return "Rock";
+  if(ch=='s')
+    return "Scissor";
+  return "Paper";
+}
+
 function win(choice,comp){
   playerScore++;
   playerScore_span.innerHTML=playerScore;
-  result_p.innerHTML=`${choice} beats ${comp}. You win :)`;
-
+  result_p.innerHTML=`${toWord(choice)} beats ${toWord(comp)}. You win :)`;
+  const choiceElement=document.getElementById(choice).classList;
+  choiceElement.add('c_green');
+  setTimeout(function(){ choiceElement.remove('c_green');}, 500);
 }
 
 function draw(choice,comp){
-  result_p.innerHTML=`${choice} equals ${comp}. It's a draw.`;
+  result_p.innerHTML=`${toWord(choice)} equals ${toWord(comp)}. It's a draw.`;
+  const choiceElement=document.getElementById(choice).classList;
+  choiceElement.add('c_grey');
+  setTimeout(function(){ choiceElement.remove('c_grey');}, 500);
 }
 
 function lose(choice,comp){
   compScore++;
   compScore_span.innerHTML=compScore;
-  result_p.innerHTML=`${comp} beats ${choice}. You lose :(`;
+  result_p.innerHTML=`${toWord(comp)} beats ${toWord(choice)}. You lose :(`;
+  const choiceElement=document.getElementById(choice).classList;
+  choiceElement.add('c_red');
+  setTimeout(function() { choiceElement.remove('c_red');}, 500);
 }
 
 function game(choice){
